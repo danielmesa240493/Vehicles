@@ -110,6 +110,7 @@ namespace Vehicles.API.Controllers
             }
             return View(brand);
         }
+
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null)

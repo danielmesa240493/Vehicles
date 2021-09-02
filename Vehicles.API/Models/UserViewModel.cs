@@ -55,5 +55,10 @@ namespace Vehicles.API.Models
         public int DocumentTypeId { get; set; }
 
         public IEnumerable<SelectListItem> DocumentTypes { get; set; }
+
+        [Display(Name = "Foto")]
+        public string ImageFullPath => ImageId == Guid.Empty
+            ? $"https://localhost:44378/images/noimage.png"
+            : $"https://vehiclesvideos.blob.core.windows.net/users/{ImageId}";
     }
 }
